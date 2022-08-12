@@ -16,6 +16,7 @@ html {
 html body {
   overflow-y: auto;
   font-family: Ubuntu, sans-serif;
+  height: 100vh;
 }
 
 /* ------- HEADER ------- */
@@ -67,24 +68,37 @@ header .burger:hover .bar {
 }
 
 /* ------- MAIN ------- */
+main {
+  height: 100%;
+}
+
 /* ------- TITLE ------- */
 .page-title {
   text-align: center;
   font-size: 20px;
-  padding: 10px 0 10px 0;
 }
 
 .title-underline {
   border: 1px solid #333;
   width: 40%;
+  margin: 20px 0 30px 0;
+}
+
+/* ------- BACKGROUND ------- */
+.background-side {
+  background-color: #d477f4;
+}
+
+.bck-sidetext {
+  text-align: center;
+  padding: 10px;
 }
 
 /* ------- FORM ------- */
-.form-side {
+.form-side .form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0 20px 0;
 }
 .form-side .form-field {
   display: flex;
@@ -105,7 +119,11 @@ header .burger:hover .bar {
   font-weight: 500;
 }
 .form-side .form-field .forgot-psw:hover {
-  color: #d197fc;
+  color: #333;
+}
+.form-side .form-field .forgot-label {
+  text-align: center;
+  padding: 10px;
 }
 .form-side .form-button {
   margin-top: 20px;
@@ -126,25 +144,35 @@ header .burger:hover .bar {
     flex-direction: column;
   }
   main .background-side {
-    background-color: #d477f4;
-  }
-  main .background-side p {
-    text-align: center;
-    padding: 10px;
+    margin-bottom: 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 768px) {
+@media (min-width: 1025px) {
   main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: inline-grid;
+    grid-template-columns: [start] 1fr [center] 1fr [end];
+    grid-template-rows: [start] 1fr [end];
   }
   main .background-side {
-    background-color: #d477f4;
+    grid-column: center/end;
+    grid-row: start/end;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
-  main .background-side p {
-    text-align: center;
-    padding: 10px;
+  main .form-side {
+    grid-column: start/center;
+    grid-row: start/end;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row !important;
+  }
+  main .form-side .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 /* margin: 8px 10px 0 0; --> FOR LAPTOP AND HIGHER */

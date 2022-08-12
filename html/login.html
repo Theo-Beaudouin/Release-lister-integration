@@ -24,7 +24,7 @@
 
     <main>
         <div class="background-side">
-            <p>
+            <p class="bck-sidetext">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Neque facilis totam ex ea tempore minima ratione cum atque 
                 nisi iure placeat nostrum expedita libero possimus rem, 
@@ -32,22 +32,25 @@
             </p>
         </div>
     
-        <h2 class="page-title">Log in</h2>
-        <hr class="title-underline">
         <div class="form-side">
-            <div class="form-field">
-                <label for="usn">Username</label>
-                <input id="usn" type="text" placeholder="Robert123">
+            <div class="form">
+                <h2 class="page-title">Log in</h2>
+                <hr class="title-underline">
+
+                <div class="form-field">
+                    <label for="usn">Username</label>
+                    <input id="usn" type="text" placeholder="Robert123">
+                </div>
+                <div class="form-field">
+                    <label for="psw">Password</label>
+                    <input id="psw" type="password" placeholder="*******">
+                    <p class="forgot-label">
+                        Forgotten <a class="forgot-psw" href="#">password</a> ?
+                    </p>
+                </div>
+            
+                <button class="form-button">Connect</button>
             </div>
-            <div class="form-field">
-                <label for="psw">Password</label>
-                <input id="psw" type="password" placeholder="*******">
-                <p>
-                    Forgotten <a class="forgot-psw" href="#">password</a> ?
-                </p>
-            </div>
-        
-            <button class="form-button">Connect</button>
         </div>
     </main>
 </body>
