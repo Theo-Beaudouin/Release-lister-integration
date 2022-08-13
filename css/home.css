@@ -31,10 +31,10 @@ header {
 }
 header .filter {
   font-size: 20px;
-  color: #d477f4;
+  color: #333;
 }
 header .filter:hover {
-  color: #333;
+  color: #d477f4;
   cursor: pointer;
 }
 header .burger {
@@ -48,7 +48,7 @@ header .bar {
   border-radius: 10px;
   height: 5px;
   background-color: #333;
-  margin: 6px;
+  margin: 6px 0 6px 0;
 }
 header .burger:hover {
   cursor: pointer;
@@ -77,6 +77,43 @@ header .burger:hover .bar {
 }
 
 /* ------- MAIN ------- */
+main {
+  padding: 20px 10px 11px 10px;
+}
+
+.cat-list {
+  width: 100%;
+  display: inline-flex;
+  gap: 15px;
+  justify-content: center;
+  list-style: none;
+}
+.cat-list .cat-item {
+  font-size: 20px;
+}
+.cat-list .cat-item:hover {
+  color: #d477f4;
+  cursor: pointer;
+  font-weight: 500;
+}
+.cat-list .active-cat {
+  color: #d477f4;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+.cat-list .add-cat {
+  background-color: #e5e5e5;
+  padding: 0 2px 0 2px;
+  border-radius: 5px;
+}
+.cat-list .add-cat:hover {
+  background-color: #d477f4;
+  cursor: pointer;
+  color: #333 !important;
+}
+
 @media (min-width: 1025px) {
   body {
     width: 1025px;
