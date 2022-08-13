@@ -27,8 +27,6 @@ html
         @include reset;
         font-family: $font;
         height: 100vh;
-        width: 1025px;
-        margin: auto;
         background-color: #d477f4;
     }
 }
@@ -42,6 +40,7 @@ html
         position: fixed;
         bottom: 0;
         width: 100%;
+        padding: 5px 10px 5px 10px;
 
         .burger
         {
@@ -49,8 +48,6 @@ html
             animation-duration: 0.5s;
             animation-fill-mode: forwards;
             width: max-content;
-            
-            margin: 0 10px 8px 0;
         }
 
         .bar
@@ -139,6 +136,12 @@ html
 
 @media (min-width: 1025px)
 {
+    body
+    {
+        width: 1025px;
+        margin: auto;
+    }
+
     .options-block
     {
         width: 100%;

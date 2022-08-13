@@ -17,24 +17,31 @@ html body {
   overflow-y: auto;
   font-family: Ubuntu, sans-serif;
   height: 100vh;
-  width: 1025px;
-  margin: auto;
 }
 
 /* ------- HEADER ------- */
 header {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding: 5px 10px 5px 10px;
+}
+header .filter {
+  font-size: 20px;
+  color: #d477f4;
+}
+header .filter:hover {
+  color: #333;
+  cursor: pointer;
 }
 header .burger {
   animation-name: stop;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   width: max-content;
-  margin: 0 10px 8px 0;
 }
 header .bar {
   width: 30px;
@@ -70,5 +77,11 @@ header .burger:hover .bar {
 }
 
 /* ------- MAIN ------- */
+@media (min-width: 1025px) {
+  body {
+    width: 1025px;
+    margin: auto;
+  }
+}
 
 /*# sourceMappingURL=home.css.map */
