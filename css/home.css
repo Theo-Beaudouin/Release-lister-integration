@@ -21,6 +21,8 @@ html body {
 
 /* ------- HEADER ------- */
 header {
+  background-color: #fff;
+  box-shadow: #333 0 -1px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +80,8 @@ header .burger:hover .bar {
 
 /* ------- MAIN ------- */
 main {
-  padding: 20px 10px 11px 10px;
+  padding: 20px 10px 20px 10px;
+  margin-bottom: 49px;
 }
 
 .cat-list {
@@ -112,6 +115,39 @@ main {
   background-color: #d477f4;
   cursor: pointer;
   color: #333 !important;
+}
+
+hr {
+  border: 1px solid #333;
+  width: 40%;
+  margin: 30px auto 30px auto;
+}
+
+.prod-section {
+  display: grid;
+  grid-template-columns: [start-col] 1fr [mid-col] 1fr [end-col];
+  gap: 10px;
+}
+.prod-section .prod-item {
+  background-color: #e5e5e5;
+  padding: 5px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.prod-section .prod-item:hover {
+  box-shadow: #d477f4 0 0 5px;
+}
+.prod-section .prod-item .prod-title {
+  text-align: center;
+  font-weight: 500;
+}
+.prod-section .prod-item-add {
+  justify-content: center !important;
+  align-items: center;
+  font-size: 40px;
 }
 
 @media (min-width: 1025px) {
