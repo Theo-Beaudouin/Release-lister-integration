@@ -27,6 +27,9 @@ html
         @include reset;
         font-family: $font;
         height: 100vh;
+        width: 1025px;
+        margin: auto;
+        background-color: #d477f4;
     }
 }
 
@@ -92,3 +95,55 @@ html
     }
 
 /* ------- MAIN ------- */
+
+    main
+    {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .purpose-text
+    {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .options
+    {
+        padding: 40px;
+        background-color: #333;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover
+        {
+            background-color: #d477f4;
+        }
+    }
+
+@media (min-width: 320px) and (max-width: 1024px)
+{
+    .options-block
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1025px)
+{
+    .options-block
+    {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        gap: 30px;
+    }
+}
