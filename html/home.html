@@ -10,11 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/ce2b43b1af.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 
     <header>
+        <div class="filter">
+            <p>
+                Filter <i class="fa-solid fa-angle-right"></i>
+            </p>
+        </div>
+
         <div class="burger">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -23,5 +31,58 @@
     </header>
 
     <main>
+        <div class="cat-list">
+            <ul>
+                <li class="cat-item active-cat">Category1</li>
+                <li class="cat-item">Category2</li>
+                <li class="cat-item">Category3</li>
+                <li class="cat-ext-item">
+                    <i class="fa-solid fa-angle-right"></i>
+                </li>
+            </ul>
 
+            <div class="add-cat">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="prod-list">
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Not Released</p>
+            </div>
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Not Released</p>
+            </div>
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Released</p>
+            </div>
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Not Released</p>
+            </div>
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Released</p>
+            </div>
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Not Released</p>
+            </div>
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Not Released</p>
+            </div>
+            <div class="prod-item">
+                <p class="prod-title">Product title</p>
+                <p class="release-status">Not Released</p>
+            </div>
+            <div class="prod-item-add">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
     </main>
