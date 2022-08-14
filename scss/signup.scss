@@ -129,7 +129,6 @@ html
 
         .form-side
         {
-
             .form
             {
                 display: flex;
@@ -238,13 +237,6 @@ html
             align-items: center;
             justify-content: center;
             flex-direction: row!important;
-
-            .form
-            {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
         }
     }
 }
