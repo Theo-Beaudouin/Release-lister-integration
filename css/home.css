@@ -19,6 +19,15 @@ html body {
   height: 100vh;
 }
 
+.filter {
+  font-size: 20px;
+  color: #333;
+}
+.filter:hover {
+  color: #d477f4;
+  cursor: pointer;
+}
+
 /* ------- HEADER ------- */
 header {
   background-color: #fff;
@@ -30,14 +39,6 @@ header {
   bottom: 0;
   width: 100%;
   padding: 5px 10px 5px 10px;
-}
-header .filter {
-  font-size: 20px;
-  color: #333;
-}
-header .filter:hover {
-  color: #d477f4;
-  cursor: pointer;
 }
 header .burger {
   animation-name: stop;
@@ -82,6 +83,10 @@ header .burger:hover .bar {
 main {
   padding: 20px 10px 20px 10px;
   margin-bottom: 49px;
+}
+
+.dktp {
+  display: none;
 }
 
 .cat-list {
@@ -131,7 +136,7 @@ hr {
 .prod-section .prod-item {
   background-color: #e5e5e5;
   padding: 5px;
-  height: 100px;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -150,10 +155,36 @@ hr {
   font-size: 40px;
 }
 
+@media (min-width: 768px) and (max-width: 1025px) {
+  .prod-section {
+    grid-template-columns: [start-col] 1fr [fst-col] 1fr [snd-col] 1fr [end-col] !important;
+  }
+}
 @media (min-width: 1025px) {
-  body {
+  /* HEADER */
+  header {
+    position: relative;
+    justify-content: flex-end;
+  }
+  header .mb {
+    display: none !important;
+  }
+  /* MAIN */
+  main {
     width: 1025px;
     margin: auto;
+  }
+  .dktp {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .cat-next {
+    display: none !important;
+  }
+  .prod-section {
+    display: grid;
+    grid-template-columns: [start-col] 1fr [fst-col] 1fr [snd-col] 1fr [end-col];
+    gap: 10px;
   }
 }
 

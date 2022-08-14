@@ -136,7 +136,17 @@ html
 
 @media (min-width: 1025px)
 {
-    body
+
+/* HEADER */
+
+    header
+    {
+        position: relative;
+    }
+
+/* MAIN */
+
+    main
     {
         width: 1025px;
         margin: auto;

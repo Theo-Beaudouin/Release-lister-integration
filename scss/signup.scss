@@ -205,6 +205,15 @@ html
 
 @media (min-width: 1025px) {
 
+/* HEADER */
+
+    header
+    {
+        position: relative;
+    }
+
+/* MAIN */
+
     main
     {
         display: inline-grid;
