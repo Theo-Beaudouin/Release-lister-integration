@@ -208,7 +208,9 @@ html
 
     header
     {
-        position: relative;
+        position: fixed;
+        bottom: auto!important;
+        top: 0;
     }
 
 /* MAIN */
