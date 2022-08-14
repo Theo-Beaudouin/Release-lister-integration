@@ -1,0 +1,257 @@
+$font: Ubuntu, sans-serif;
+
+@mixin reset
+{
+    overflow-y: auto;
+}
+
+*
+{
+    box-sizing: border-box;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html
+{
+    @include reset;
+
+    body
+    {
+        @include reset;
+        font-family: $font;
+        height: 100vh;
+    }
+}
+
+.filter
+{
+    font-size: 20px;
+    color: #333;
+
+    &:hover
+    {
+        color: #d477f4;
+        cursor: pointer;
+    }
+}
+
+/* ------- HEADER ------- */
+
+    header
+    {
+        background-color: #fff;
+        box-shadow: #333 0 -1px 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 5px 10px 5px 10px;
+
+        .burger
+        {
+            animation-name: stop;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            width: max-content;
+        }
+
+        .bar
+        {
+            width: 30px;
+            border-radius: 10px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0 6px 0;
+        }
+
+        .burger:hover
+        {
+            cursor: pointer;
+            animation-name: rotate;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+    
+            .bar
+            {
+                background-color: #d477f4;
+            }
+        }
+    
+        @keyframes rotate {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(-90deg);
+            }
+        }
+    
+        @keyframes stop {
+            from {
+                transform: rotate(-90deg);
+            }
+            to {
+                transform: rotate(0);
+            }
+        }
+    }
+
+/* ------- MAIN ------- */
+
+    main
+    {
+        padding: 20px 10px 20px 10px;
+        margin-bottom: 49px;
+    }
+
+    .dktp
+    {
+        display: none;
+    }
+
+    .cat-list
+    {
+        width: 100%;
+        display: inline-flex;
+        gap: 15px;
+        justify-content: center;
+        list-style: none;
+
+        .cat-item
+        {
+            font-size: 20px;
+
+            &:hover
+            {
+                color: #d477f4;
+                cursor: pointer;
+                font-weight: 500;
+            }
+        }
+
+        .active-cat
+        {
+            color: #d477f4;
+            font-weight: 500;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 3px;
+        }
+
+        .add-cat
+        {
+            background-color: #e5e5e5;
+            padding: 0 2px 0 2px;
+            border-radius: 5px;
+
+            &:hover
+            {
+                background-color: #d477f4;
+                cursor: pointer;
+                color: #333!important;
+            }
+        }
+    }
+
+    hr
+    {
+        border: 1px solid #333;
+        width: 40%;
+        margin: 30px auto 30px auto;
+    }
+
+    .prod-section
+    {
+        display: grid;
+        grid-template-columns: [start-col] 1fr [mid-col] 1fr [end-col];
+        gap: 10px;
+
+        .prod-item
+        {
+            background-color: #e5e5e5;
+            padding: 5px;
+            height: 15vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+
+            &:hover
+            {
+                box-shadow: #d477f4 0 0 5px;
+            }
+
+            .prod-title
+            {
+                text-align: center;
+                font-weight: 500;
+            }
+        }
+
+        .prod-item-add
+        {
+            justify-content: center!important;
+            align-items: center;
+            font-size: 40px;
+        }
+    }
+
+@media (min-width: 768px) and (max-width: 1025px) {
+
+    .prod-section
+    {
+        grid-template-columns: [start-col] 1fr [fst-col] 1fr [snd-col] 1fr[end-col]!important;
+    }
+}
+
+@media (min-width: 1025px)
+{
+
+/* HEADER */
+
+    header
+    {
+        position: relative;
+        justify-content: flex-end;
+
+        .mb
+        {
+            display: none!important;
+        }
+    }
+
+/* MAIN */
+
+    main
+    {
+        width: 1025px;
+        margin: auto;
+    }
+
+    .dktp
+    {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .cat-next
+    {
+        display: none!important;
+    }
+
+    .prod-section
+    {
+        display: grid;
+        grid-template-columns: [start-col] 1fr [fst-col] 1fr [snd-col] 1fr[end-col];
+        gap: 10px;
+    }
+}
