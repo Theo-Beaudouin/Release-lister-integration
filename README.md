@@ -4,7 +4,7 @@
 
 This is the repo for the integration of the **Release-lister project**.
 
-**Release-lister** as for purpose to allow to add and categorize products of his choice that are yet to be released.
+**Release-lister** as for purpose to allow to add and categorize products of your choice that are yet to be released.
 The app can also be used as a shopping list, even in a *'pro'* environment.
 The integration will be made with *HTML5* and *SCSS*.
 
