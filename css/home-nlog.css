@@ -17,8 +17,6 @@ html body {
   overflow-y: auto;
   font-family: Ubuntu, sans-serif;
   height: 100vh;
-  width: 1025px;
-  margin: auto;
   background-color: #d477f4;
 }
 
@@ -29,13 +27,13 @@ header {
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding: 5px 10px 5px 10px;
 }
 header .burger {
   animation-name: stop;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   width: max-content;
-  margin: 0 10px 8px 0;
 }
 header .bar {
   width: 30px;
@@ -105,6 +103,17 @@ main {
   }
 }
 @media (min-width: 1025px) {
+  /* HEADER */
+  header {
+    position: relative;
+  }
+  /* MAIN */
+  main
+  {
+    width: 1025px;
+    margin: auto;
+  }
+
   .options-block {
     width: 100%;
     display: inline-flex;

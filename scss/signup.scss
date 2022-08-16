@@ -208,15 +208,15 @@ html
 
     header
     {
-        position: fixed;
-        bottom: auto!important;
-        top: 0;
+        position: relative;
     }
 
 /* MAIN */
 
     main
     {
+        width: 1025px;
+        margin: auto;
         display: inline-grid;
         grid-template-columns: [start] 1fr [center] 1fr [end];
         grid-template-rows: [start] 1fr [end];
